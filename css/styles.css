@@ -1,0 +1,607 @@
+ @import url('https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 12px;
+font-family: 'Karla', sans-serif;
+	scroll-behavior: smooth;
+}
+body {
+     font-family: 'Karla', sans-serif;
+    margin: 0;
+    padding: 0;
+	overflow-x: hidden;
+}
+
+header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+			height: 60px;
+            background-color: transparent; /* Начальный цвет фона (прозрачный) */
+            transition: background-color 0.5s ease; /* Анимация смены цвета фона */
+			color: white;
+			padding: 2rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text-align: center;
+			z-index: 2;
+		}
+
+        header.scrolled {
+            background-color: #bebaae; /* Цвет фона при скроллинге */
+			height: 60px;
+		}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Сдвигает логотип вправо */
+}
+
+.logo-container img {
+    width: 200px;
+    height: auto;
+	margin-left:10px;
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+	justify-content: center;
+}
+
+nav ul li {
+    margin: 0 3rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+ transition: color 0.3s;
+    
+}
+
+/* Стили для первой секции */
+.home-section {
+    height: 100vh; /* Высота экрана */
+    background-image: url('background.jpg'); /* Замените на свой фоновый рисунок */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    text-align: center;
+	 padding-left: 60%;
+}
+
+.overlay {
+    background-color: transparent; /* Полупрозрачный черный фон поверх фона */
+    padding: 2rem;
+}
+
+.home-section h1 {
+	text-align: left;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 6rem; /* Увеличьте размер шрифта для первой строки */
+    margin-bottom: 0.2rem; /* Уменьшите отступ снизу первой строки */
+}
+
+.home-section p {
+	text-align: left;
+	 font-family: 'Karla', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.cta-button {
+	 font-family: 'Karla', sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+	
+    
+}
+.cta-button:hover {
+    background-color: transparent;
+    color: gray; /* Показываем текст при наведении */
+	
+}
+
+
+#about {
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+	
+}
+
+#about h2 {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 3rem;
+    color: #b0966e;
+    margin-bottom: 6rem;
+	
+}
+
+.about-blocks {
+    display: flex;
+    flex-wrap: wrap;   
+	justify-content: space-between;/* Изменение: space-around на space-between */ /* Новое: Расстояние между блоками */
+	align-items: center;
+	margin-left:140px;
+	margin-right:140px;
+	
+}
+
+.about-item {
+    /* Ширина блока (можно настроить по вашему усмотрению) */
+    margin: 0.5%;
+	margin-bottom: 2rem;
+	background-color: #f3f4ed;
+	display: flex;
+   width:520px;
+   
+	
+}
+
+.about-icon {
+    float: left;
+    margin-left: 1.5rem;
+	margin-right: 1.5rem;
+	 margin-top: 1.5rem;
+	 display: flex;
+	
+}
+
+.about-icon img {
+    width: 70px; /* Размер иконки (можно настроить по вашему усмотрению) */
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+	
+}
+
+.about-text {
+    text-align: left;
+	
+}
+
+.about-text h3 {
+	font-family: 'Karla', sans-serif;
+    font-size: 1.5rem;
+    color: #b0966e;
+    margin-bottom: 1rem;
+	margin-top:2rem;
+}
+
+.about-text p {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.2rem;
+    color: gray;
+    margin-bottom: 2rem;
+	margin-top:0rem;
+}
+
+
+#directions {
+    text-align: center;
+    padding-top: 0rem; /* Отступ сверху */
+}
+
+#directions h2 {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 3rem;
+    color: #b0966e; /* Цвет текста */
+    margin-bottom: 7rem;
+}
+
+.direction-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+	margin: 5%;
+}
+
+.direction-item {
+    text-align: center;
+    width: 48%; /* Ширина элемента, чтобы два поместились в ряд с отступом */
+    margin: 0.5%; /* Отступ между элементами */
+}
+
+.direction-item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    transition: transform 0.3s ease; /* Добавляем анимацию для smooth перехода */
+}
+
+.direction-item:hover img {
+    transform: scale(0.95); /* Увеличиваем изображение в 1.1 раза при наведении */
+}
+
+.direction-title {
+	margin-left: 5.6rem;
+    text-align: left; /* Выравниваем текст слева */
+    color: gray; /* Цвет текста */
+    margin-top: 1rem; /* Отступ сверху */
+    border-bottom: 2px solid #b0966e; /* Горизонтальная полоса под названием */
+	width: 77%; 
+    padding-bottom: 0.5rem; /* Отступ снизу от полосы */
+    font-size: 1.3rem;
+	
+}
+
+.schedule {
+	margin-bottom:2rem;
+	margin-left: 5.6rem;
+	text-align: left;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.3rem;
+    color: gray; /* Цвет текста расписания */
+    margin-top: 0.5rem; /* Отступ сверху */
+}
+#trainers {
+    text-align: center;
+    padding-top: 0rem;
+    padding-bottom: 4rem;
+}
+#trainers h2 {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 3rem;
+    color: #b0966e; /* Цвет текста */
+    margin-bottom: 6rem;
+}
+.trainers-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+
+.trainer-item {
+    text-align: center;
+    width: 30%; /* Подберите подходящую ширину */
+    margin: 1%;
+}
+
+.trainer-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+	  transition: transform 0.3s ease;
+}
+.trainer-item:hover img {
+    transform: scale(1.1); /* Увеличиваем изображение в 1.1 раза при наведении */
+}
+.trainer-info {
+	font-family: 'Karla', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+	color: gray;
+}
+#booking-form {
+    background-image: url('bg.jpg');
+    background-size: cover;
+	opacity: 0.9;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 18rem 18rem; /* Регулируйте отступы, чтобы соответствовать вашему дизайну */
+}
+
+#booking-form h2 {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+#booking-form form {
+    max-width: 800px; /* Ширина формы */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование по горизонтали */
+}
+
+.form-group {
+
+    margin-bottom: 1.5rem;
+}
+
+#booking-form label {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#booking-form input {
+
+    width: 70%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    border: none;
+    border-bottom: 2px solid white; /* Подчеркивание для стиля */
+    background-color: transparent;
+    color: white;
+    outline: none; /* Убираем рамку фокуса */
+}
+#booking-form input::placeholder {
+    color: white; /* Устанавливаем цвет текста в placeholder */
+    font-size: 1.5rem; /* Устанавливаем размер шрифта в placeholder */
+}
+#booking-form button {
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+#booking-form button:hover {
+    background-color: transparent;
+    color: gray;
+
+}
+ #contact 
+ {
+    background-color: #f3f4ed;
+    text-align: center;
+    padding: 6rem 0rem; /* Регулируйте отступы, чтобы соответствовать вашему дизайну */
+	margin-bottom: -4rem	
+ }
+#contact h2 {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 3rem;
+    color: #b0966e;
+    margin-bottom: 6rem;
+	
+}
+#contact h3 {
+    font-family: 'Klara', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+	 text-align: left; /* Выравниваем текст по левому краю */
+    margin-left: 70px;
+}
+#contact p {
+    font-family: 'Klara', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 1rem;
+	 text-align: left; /* Выравниваем текст по левому краю */
+    margin-left: 70px;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+	
+}
+
+.contact-info img {
+    width: 20px; /* Задайте желаемую ширину иконок */
+    height: 20px; /* Задайте желаемую высоту иконок */
+}
+.social-icons {
+    display: flex;
+    align-items: center; /* Центрирование иконок по вертикали */
+    margin-top: 1rem;
+	margin-left:60px;
+}
+
+.social-icons a {
+    margin: 0 1rem; /* Расстояние между иконками */
+	
+}
+.social-icons img {
+    width: 20px; /* Задайте желаемую ширину иконок */
+    height: 20px; /* Задайте желаемую высоту иконок */
+}
+.contact-info {
+	width: 400px; /* Подберите подходящую ширину */
+    text-align: left; /* Выравнивание текста слева */
+    background-color: #b0966e; /* Цвет фона */
+    padding: 3rem; /* Подберите отступы */
+    color: white; /* Цвет текста */
+    border-radius: 10px; /* Скругление углов */
+	 display: flex;
+	 flex-direction: column; /* Столбец, чтобы элементы были один под другим */
+    justify-content: center; 
+    height: 400px;
+	
+}
+
+ .map-container {
+            width: 400px; /* Подберите подходящую ширину */
+        margin-left: 100px; /* Отрицательный margin для сохранения расстояния между картой и контактами */
+
+		}
+
+        /* Стили для гугл карты */
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+	border: none; /* Убираем границу у iframe */
+	border-radius: 10px;
+	
+}
+
+
+footer {    
+	position: relative;
+	bottom: 0; /* Прижимаем к нижнему краю */
+	width: 100%; /* Ширина на всю ширину страницы */
+	margin-top: 20px;
+    background-color: #f3f4ed;
+    text-align: center;
+    padding: 2rem 0;
+    color: #b0966e;
+    z-index: 999; /* Устанавливаем z-index, чтобы футер был выше других элементов */
+	flex: 1 0 auto;
+ 
+}
+.footer-content {
+    font-size: 1rem; /* Размер текста в футере */
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        height: 50px;
+        padding: 0.5rem;
+		
+    }
+
+    .logo-container img {
+        width: 110px;
+    }
+	nav ul li a {
+        font-size: 0.9rem;
+    }
+    nav ul li {
+        margin: 0 1rem;
+    }
+	.home-section {
+    
+	 padding-left: 20%;
+	}
+	.home-section h1 {
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .home-section p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+	.cta-button {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+	}
+	.about-item {
+	width:100%;
+    box-sizing: border-box; 
+    margin: 10px; /* Даем небольшие отступы между блоками */
+    display: flex;
+    flex-direction: column; /* Располагаем дочерние элементы (иконку и текст) в столбец */
+    align-items: center; /* Выравниваем элементы по центру блока */
+	padding:10px;
+}
+
+    .about-icon img {
+        width: 50px;
+        height: 50px;
+		display: block;
+    }
+	#about h2 {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+	#directions h2 {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+	.direction-title {
+	margin-left: 0rem;
+    font-size: 1.2rem;
+	
+}
+	.schedule {
+	margin-left: 0rem;
+    font-size: 1.2rem;
+	}
+    .direction-title {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .direction-item {
+        width: 100%;
+        margin: 1rem 0;
+    }
+	#trainers h2 {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+	.trainer-info {
+    font-size: 1.2rem;
+	}
+	#booking-form {
+    padding: 10rem 10rem; 
+}
+	#booking-form h2 {
+    font-size: 2.5rem;
+	}
+    #booking-form label {
+    font-size: 1.2rem;
+	}
+
+	#booking-form input {
+
+    width: 200px;
+    font-size: 1.2rem;
+	}
+	#booking-form input::placeholder {
+    font-size: 1.2rem; 
+	}
+
+	#contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    #contact h3, #contact p {
+		font-size:1.2rem;
+        margin-right: 10px;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+	.map-container {
+        width: 100%; /* Подберите подходящую ширину */
+        margin-left: 0px; 
+	}
+}
